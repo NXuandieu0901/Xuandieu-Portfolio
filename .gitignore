@@ -1,0 +1,9 @@
+# Large unused raw camera photos
+MOI00133.JPG
+*.heic
+20260424_134324.jpg
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.tmp

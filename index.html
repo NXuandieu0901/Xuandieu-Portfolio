@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Xuân Diệu | Chuyển Đổi Số & Công Nghệ Thông Tin</title>
+  <meta name="description" content="Portfolio cá nhân của Nguyễn Xuân Diệu - Sinh viên CNTT PTIT, 5 năm kinh nghiệm thực chiến, chuyên môn về chuyển đổi số, tự động hóa quy trình và kiến trúc hệ thống.">
+  <meta name="keywords" content="Nguyễn Xuân Diệu, Portfolio, Chuyển đổi số, PTIT, Docker, Python, Taekwondo, GPS, Cloudflare Tunnel">
+  <meta name="author" content="Nguyễn Xuân Diệu">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230052FF'/><path d='M30 70 L30 30 L50 55 L70 30 L70 70' stroke='%2300E5FF' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tech-grid-bg">
+
+  <!-- Thanh tiến trình cuộn trang -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#tong-quan" class="brand-logo" aria-label="Trang chủ Xuandieu IT">
+        <span class="logo-box" title="Nguyễn Xuân Diệu (NXD)">
+          <svg viewBox="0 0 36 36" fill="none" class="logo-icon" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoBgGrad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0052FF"/>
+                <stop offset="100%" stop-color="#002F9E"/>
+              </linearGradient>
+            </defs>
+            <!-- Khung nền công nghệ với viền neon mờ -->
+            <rect width="36" height="36" rx="9" fill="url(#logoBgGrad)" />
+            <rect x="0.75" y="0.75" width="34.5" height="34.5" rx="8.25" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.5" />
+            <!-- Chữ lồng Monogram N - X - D tinh tế -->
+            <!-- Chữ N (Trắng sáng - Bản lĩnh & Kỷ luật) -->
+            <path d="M7.5 25V11L14 25V11" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Chữ X (Xanh Neon Cyan - Điểm cắt lồng công nghệ) -->
+            <path d="M11.5 11L22.5 25M22.5 11L15 20.5" stroke="#00E5FF" stroke-width="2.2" stroke-linecap="round" />
+            <!-- Chữ D (Xanh Neon Green - Vòm bao bọc vững chãi) -->
+            <path d="M19.5 11H23C26.8 11 28.5 13.8 28.5 18C28.5 22.2 26.8 25 23 25H19.5" stroke="#00E676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Xuandieu <span class="brand-badge-it">IT</span></span>
+          <span class="brand-tag">DIGITAL TRANSFORMATION</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="navLinks" aria-label="Menu chính">
+        <a href="#tong-quan" class="nav-link">Tổng quan</a>
+        <a href="#so-lieu" class="nav-link">Số liệu</a>
+        <a href="#du-an" class="nav-link">Dự án GPS</a>
+        <a href="#hanh-trinh" class="nav-link">Hành trình</a>
+        <a href="#ky-nang" class="nav-link">Kỹ năng</a>
+        <a href="#hinh-anh" class="nav-link">Thực tế</a>
+        <a href="#lien-he" class="nav-link nav-cta">Kết nối</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="tong-quan">
+      <div class="hero-glow-blob blob-1"></div>
+      <div class="hero-glow-blob blob-2"></div>
+
+      <div class="container hero-grid">
+        <!-- Cột nội dung Hero -->
+        <div class="hero-content">
+          <div class="badge-pill anti-gravity-subtle">
+            <span class="status-indicator"></span>
+            <span class="badge-text">CHUYỂN ĐỔI SỐ · CÔNG NGHỆ THÔNG TIN</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Xin chào, tôi là</span>
+            <span class="hero-name">Nguyễn Xuân Diệu<span class="highlight-dot">.</span></span>
+            <span class="hero-subtitle">Từ Kỷ Luật Võ Đạo Đến Kiến Trúc Số</span>
+          </h1>
+
+          <p class="hero-desc">
+            Sinh viên năm nhất ngành <strong>Công nghệ thông tin</strong> tại <strong>Học viện Công nghệ Bưu chính Viễn thông (PTIT)</strong> · Cựu sinh viên năm 3 Đại học Công nghệ Giao thông Vận tải (UTT).
+          </p>
+
+          <p class="hero-subdesc">
+            Với <strong>5 năm kinh nghiệm</strong> làm việc thực chiến (2 năm Freelance + 3 năm làm Huấn luyện viên dạy võ cho học sinh Hàn Quốc), tôi kết hợp tính kỷ luật thép từ võ đạo với tư duy công nghệ để giải quyết bài toán vận hành và thúc đẩy chuyển đổi số thực tế.
+          </p>
+
+          <!-- Nút hành động -->
+          <div class="hero-actions">
+            <a href="#du-an" class="btn btn-primary btn-glow">
+              <span>Khám phá Dự án GPS</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#lien-he" class="btn btn-outline">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span>Thông tin liên hệ</span>
+            </a>
+          </div>
+
+          <!-- Quick Micro-Badges -->
+          <div class="hero-meta-pills">
+            <div class="meta-item">
+              <span class="meta-label">ĐỊA CHỈ:</span>
+              <span class="meta-value">Hà Nội, Việt Nam</span>
+            </div>
+            <div class="meta-divider">/</div>
+            <div class="meta-item">
+              <span class="meta-label">TRƯỜNG:</span>
+              <span class="meta-value">PTIT</span>
+            </div>
+            <div class="meta-divider">/</div>
+            <div class="meta-item">
+              <span class="meta-label">TRẠNG THÁI:</span>
+              <span class="meta-value text-neon-green">Sẵn sàng hợp tác</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Visual: Khung ảnh Hero Anti-Gravity & Radar Preview -->
+        <div class="hero-visual">
+          <div class="hero-avatar-card anti-gravity-float">
+            <!-- Neon Border Frame -->
+            <div class="avatar-glow-ring"></div>
+            
+            <div class="avatar-image-wrapper">
+              <img 
+                src="file_000000005274821184aca240a774a90a 1.jpg" 
+                alt="Chân dung Nguyễn Xuân Diệu trong võ phục Taekwondo đai đen" 
+                class="avatar-img"
+                id="heroAvatarImg"
+                loading="eager"
+              >
+              <div class="avatar-overlay-gradient"></div>
+            </div>
+
+            <!-- Floating Card Badge 1: Huấn luyện viên -->
+            <div class="floating-badge badge-taekwondo anti-gravity-delay-1">
+              <div class="badge-icon-wrap bg-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">Huấn Luyện Viên Võ</span>
+                <span class="badge-sub">Đai đen · 3 năm dạy HS Hàn Quốc</span>
+              </div>
+            </div>
+
+            <!-- Floating Card Badge 2: CNTT & PTIT -->
+            <div class="floating-badge badge-it anti-gravity-delay-2">
+              <div class="badge-icon-wrap bg-neon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">Sinh viên CNTT PTIT</span>
+                <span class="badge-sub">Kiến trúc Cloud · Tự động hóa</span>
+              </div>
+            </div>
+
+            <!-- Mini Radar GPS Card Attached -->
+            <div class="floating-badge badge-gps anti-gravity-delay-3">
+              <div class="pulse-beacon"></div>
+              <span class="gps-label">GPS GEOFENCE ACTIVE: 35 nhân viên</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION SỐ LIỆU NỔI BẬT (COUNTER STATS) -->
+    <section class="section stats-section" id="so-lieu">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-tech">CHI TIẾT ĐO LƯỜNG HIỆU QUẢ</div>
+          <h2 class="section-title">Số Liệu Thực Tế Minh Chứng Năng Lực</h2>
+          <p class="section-subtitle">
+            Những con số thực tế được đúc kết từ 5 năm làm việc, từ việc giảng dạy đến xây dựng và tối ưu hoá hệ thống công nghệ.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Card 1: 5 năm kinh nghiệm -->
+          <div class="stat-card anti-gravity-card">
+            <div class="stat-card-glow"></div>
+            <div class="stat-header">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <span class="stat-tag">KINH NGHIỆM</span>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="5">5</span>
+                <span class="stat-unit">Năm</span>
+              </div>
+              <h3 class="stat-title">Đi làm thực chiến</h3>
+              <p class="stat-desc">
+                Gồm 2 năm làm công việc tự do (Freelance) và 3 năm đảm nhiệm vị trí Huấn luyện viên kiêm quản trị vận hành.
+              </p>
+            </div>
+            <div class="stat-footer-bar">
+              <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Card 2: 300+ Học sinh Hàn Quốc -->
+          <div class="stat-card anti-gravity-card" style="animation-delay: 0.15s;">
+            <div class="stat-card-glow"></div>
+            <div class="stat-header">
+              <div class="stat-icon-wrap text-neon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="stat-tag">ĐÀO TẠO</span>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="300">300</span>
+                <span class="stat-unit">+</span>
+              </div>
+              <h3 class="stat-title">Học sinh Hàn Quốc</h3>
+              <p class="stat-desc">
+                Trực tiếp hướng dẫn, huấn luyện kỹ thuật Taekwondo, tác phong kỷ luật và thể lực bài bản cho học sinh quốc tế.
+              </p>
+            </div>
+            <div class="stat-footer-bar">
+              <div class="progress-fill bg-neon-cyan" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Card 3: 180 học sinh tiến bộ / 60% -->
+          <div class="stat-card anti-gravity-card" style="animation-delay: 0.3s;">
+            <div class="stat-card-glow"></div>
+            <div class="stat-header">
+              <div class="stat-icon-wrap text-neon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <span class="stat-tag">THÀNH TÍCH</span>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="180">180</span>
+                <span class="stat-unit">Em <span class="stat-sub-ratio">(60%)</span></span>
+              </div>
+              <h3 class="stat-title">Tiến bộ vượt bậc</h3>
+              <p class="stat-desc">
+                180 em tiến bộ rõ rệt và đạt thành tích thi đấu xuất sắc, nâng cao uy tín và tỷ lệ giữ chân học viên của võ đường.
+              </p>
+            </div>
+            <div class="stat-footer-bar">
+              <div class="progress-fill bg-neon-green" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <!-- Card 4: 6 tháng kinh doanh có lãi -->
+          <div class="stat-card anti-gravity-card" style="animation-delay: 0.45s;">
+            <div class="stat-card-glow"></div>
+            <div class="stat-header">
+              <div class="stat-icon-wrap text-neon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <span class="stat-tag">TĂNG TRƯỞNG</span>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="6">6</span>
+                <span class="stat-unit">Tháng</span>
+              </div>
+              <h3 class="stat-title">Liên tiếp có lãi</h3>
+              <p class="stat-desc">
+                Cùng ban quản trị tối ưu hóa chi phí, cải thiện quy trình chăm sóc học viên giúp trung tâm kinh doanh có lãi 6 tháng liền.
+              </p>
+            </div>
+            <div class="stat-footer-bar">
+              <div class="progress-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- Card 5: 35 nhân viên quản lý GPS -->
+          <div class="stat-card anti-gravity-card" style="animation-delay: 0.6s;">
+            <div class="stat-card-glow"></div>
+            <div class="stat-header">
+              <div class="stat-icon-wrap text-neon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span class="stat-tag">HỆ THỐNG SỐ</span>
+            </div>
+            <div class="stat-body">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="35">35</span>
+                <span class="stat-unit">Nhân sự</span>
+              </div>
+              <h3 class="stat-title">Quản lý chấm công GPS</h3>
+              <p class="stat-desc">
+                Số lượng nhân sự được vận hành hàng ngày trên hệ thống web chấm công điện tử tự xây dựng từ A-Z.
+              </p>
+            </div>
+            <div class="stat-footer-bar">
+              <div class="progress-fill bg-neon-cyan" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DỰ ÁN TRỌNG TÂM: HỆ THỐNG CHẤM CÔNG GPS -->
+    <section class="section project-section" id="du-an">
+      <div class="container">
+        <!-- Tiêu đề mục -->
+        <div class="section-header">
+          <div class="eyebrow-tech">DỰ ÁN CHUYỂN ĐỔI SỐ TRỌNG TÂM</div>
+          <h2 class="section-title">Hệ Thống Chấm Công Điện Tử Bằng GPS & Quản Lý Nhân Sự</h2>
+          <p class="section-subtitle">
+            Dự án độc lập phụ trách toàn bộ từ ý tưởng, kiến trúc, viết mã nguồn, triển khai hạ tầng tại gia đến việc chuyển đổi số sang hệ sinh thái ERP chuyên nghiệp.
+          </p>
+        </div>
+
+        <!-- Khung tổng quan dự án 2 cột -->
+        <div class="project-overview-grid">
+          <!-- Cột thông tin chi tiết -->
+          <div class="project-info-card">
+            <div class="project-badge-row">
+              <span class="pill pill-blue">TOÀN QUYỀN PHỤ TRÁCH (A-Z)</span>
+              <span class="pill pill-green">VẬN HÀNH THỰC TẾ 3 THÁNG</span>
+              <span class="pill pill-cyan">TỐI ƯU HÓA QUY TRÌNH</span>
+            </div>
+
+            <h3 class="project-name">Giải Bài Toán Quản Trị Nhân Sự Cho Trung Tâm Võ Thuật</h3>
+            <p class="project-text">
+              Tại trung tâm dạy võ cho học sinh Hàn Quốc với <strong>35 nhân viên</strong> (bao gồm huấn luyện viên, trợ giảng, nhân viên văn phòng), việc quản lý ngày công và giờ giấc bằng sổ sách hay điểm danh thủ công gặp nhiều bất cập, thiếu minh bạch và tốn thời gian.
+            </p>
+            <p class="project-text">
+              Tôi đã tự mình nghiên cứu, thiết kế và phát triển <strong>trang web chấm công điện tử tích hợp định vị GPS</strong>. Khi nhân viên có mặt tại bán kính cho phép của trung tâm, hệ thống mới hợp lệ hoá lượt chấm công, lưu trữ toạ độ và thời gian theo thời gian thực.
+            </p>
+
+            <!-- Tech Stack Pills -->
+            <div class="tech-stack-container">
+              <span class="tech-stack-title">CÔNG NGHỆ ÁP DỤNG:</span>
+              <div class="tech-stack-tags">
+                <span class="tech-tag"><span class="tech-dot py"></span>Python (Web Backend & Logic)</span>
+                <span class="tech-tag"><span class="tech-dot dock"></span>Docker Containerization</span>
+                <span class="tech-tag"><span class="tech-dot ub"></span>Ubuntu Server (Home Lab)</span>
+                <span class="tech-tag"><span class="tech-dot cf"></span>Cloudflare Tunnel (Secure Zero Trust)</span>
+                <span class="tech-tag"><span class="tech-dot gps"></span>HTML5 Geolocation API (Bán kính Geofence)</span>
+              </div>
+            </div>
+
+            <!-- Operational Metrics Grid -->
+            <div class="operational-metrics">
+              <div class="op-metric-item">
+                <div class="op-metric-value text-neon-blue">35</div>
+                <div class="op-metric-label">Nhân sự điểm danh mỗi ngày</div>
+              </div>
+              <div class="op-metric-item">
+                <div class="op-metric-value text-neon-green">3 Tháng</div>
+                <div class="op-metric-label">Vận hành liên tục ổn định</div>
+              </div>
+              <div class="op-metric-item">
+                <div class="op-metric-value text-neon-cyan">1 Lần</div>
+                <div class="op-metric-label">Sự cố điện duy nhất (xử lý tức thì)</div>
+              </div>
+              <div class="op-metric-item">
+                <div class="op-metric-value text-neon-blue">100%</div>
+                <div class="op-metric-label">Chính xác dữ liệu ngày công</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột Radar GPS SVG Interactive -->
+          <div class="radar-interactive-card">
+            <div class="radar-card-header">
+              <div class="radar-status">
+                <span class="live-dot"></span>
+                <span>GPS RADAR MONITOR · GEOFENCE 50M</span>
+              </div>
+              <span class="radar-coords">LAT: 21.0285° N · LNG: 105.8542° E</span>
+            </div>
+
+            <!-- Radar SVG Illustration -->
+            <div class="radar-svg-wrapper">
+              <svg class="radar-svg" viewBox="0 0 340 340" role="img" aria-label="Mô phỏng Radar GPS chấm công với tâm định vị và nhân viên xung quanh">
+                <defs>
+                  <!-- Gradient cho tia quét radar -->
+                  <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.45" />
+                    <stop offset="50%" stop-color="#0052FF" stop-opacity="0.15" />
+                    <stop offset="100%" stop-color="#0052FF" stop-opacity="0" />
+                  </linearGradient>
+                  <!-- Radial Gradient cho tâm phát sóng -->
+                  <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+                    <stop offset="60%" stop-color="#0052FF" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#0052FF" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Vòng tròn tọa độ Geofence -->
+                <circle class="radar-ring r-outer" cx="170" cy="170" r="150" />
+                <circle class="radar-ring r-mid" cx="170" cy="170" r="105" />
+                <circle class="radar-ring r-safe" cx="170" cy="170" r="60" />
+
+                <!-- Trục tọa độ chữ thập -->
+                <line class="radar-axis" x1="170" y1="15" x2="170" y2="325" />
+                <line class="radar-axis" x1="15" y1="170" x2="325" y2="170" />
+                <line class="radar-axis-diag" x1="60" y1="60" x2="280" y2="280" />
+                <line class="radar-axis-diag" x1="280" y1="60" x2="60" y2="280" />
+
+                <!-- Sóng xung kích phát ra từ tâm -->
+                <circle class="radar-pulse-wave" cx="170" cy="170" r="60" />
+                <circle class="radar-pulse-wave wave-delayed" cx="170" cy="170" r="60" />
+
+                <!-- Tia quét Radar (Sweeper) xoay tròn 360 độ -->
+                <g class="radar-sweeper-group">
+                  <path class="radar-sweep-wedge" d="M170 170 L170 20 A150 150 0 0 1 276 64 Z" fill="url(#sweepGrad)" />
+                  <line class="radar-sweep-edge" x1="170" y1="170" x2="276" y2="64" />
+                </g>
+
+                <!-- Vùng an toàn Geofence Highlight -->
+                <circle cx="170" cy="170" r="60" fill="url(#centerGlow)" />
+
+                <!-- Tâm định vị trạm chấm công (Trung tâm võ) -->
+                <circle class="radar-center-beacon" cx="170" cy="170" r="10" fill="#0052FF" />
+                <circle class="radar-center-core" cx="170" cy="170" r="4.5" fill="#00E5FF" />
+                <circle class="radar-center-pin" cx="170" cy="170" r="2" fill="#FFFFFF" />
+
+                <!-- Các chấm nhân viên (Staff dots) xuất hiện ngẫu nhiên trong tầm sóng -->
+                <g class="radar-staff-group">
+                  <!-- Nhân viên trong bán kính an toàn (Hợp lệ - Màu xanh lục neon) -->
+                  <g class="staff-point s-valid s-1">
+                    <circle cx="145" cy="140" r="5" class="staff-core valid-core" />
+                    <circle cx="145" cy="140" r="11" class="staff-ping valid-ping" />
+                    <text x="135" y="132" class="staff-tag">NV #08</text>
+                  </g>
+                  <g class="staff-point s-valid s-2">
+                    <circle cx="195" cy="185" r="5" class="staff-core valid-core" />
+                    <circle cx="195" cy="185" r="11" class="staff-ping valid-ping" />
+                    <text x="198" y="202" class="staff-tag">HLV #03</text>
+                  </g>
+                  <g class="staff-point s-valid s-3">
+                    <circle cx="175" cy="125" r="5" class="staff-core valid-core" />
+                    <circle cx="175" cy="125" r="11" class="staff-ping valid-ping" />
+                    <text x="180" y="120" class="staff-tag">NV #19</text>
+                  </g>
+                  
+                  <!-- Nhân viên đang tiến vào (Màu xanh neon) -->
+                  <g class="staff-point s-info s-4">
+                    <circle cx="230" cy="115" r="5" class="staff-core info-core" />
+                    <circle cx="230" cy="115" r="10" class="staff-ping info-ping" />
+                    <text x="235" y="112" class="staff-tag">HLV #07</text>
+                  </g>
+                  <g class="staff-point s-info s-5">
+                    <circle cx="95" cy="225" r="5" class="staff-core info-core" />
+                    <circle cx="95" cy="225" r="10" class="staff-ping info-ping" />
+                    <text x="65" y="240" class="staff-tag">NV #24</text>
+                  </g>
+                  <g class="staff-point s-info s-6">
+                    <circle cx="255" cy="210" r="4.5" class="staff-core info-core" />
+                    <text x="260" y="222" class="staff-tag">NV #31</text>
+                  </g>
+                </g>
+
+                <!-- Nhãn Radar -->
+                <text x="185" y="165" class="radar-hud-label">CENTER HQ</text>
+                <text x="175" y="222" class="radar-radius-label">R = 50m (HỢP LỆ)</text>
+              </svg>
+            </div>
+
+            <!-- Radar Footer Legend -->
+            <div class="radar-legend">
+              <div class="legend-item">
+                <span class="legend-dot bg-neon-green"></span>
+                <span>Vị trí hợp lệ (Trong 50m)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot bg-neon-cyan"></span>
+                <span>Đang kết nối</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot bg-primary"></span>
+                <span>Trung tâm võ thuật</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SƠ ĐỒ LUỒNG KIẾN TRÚC HỆ THỐNG (ARCHITECTURE FLOW) -->
+        <div class="architecture-flow-wrapper">
+          <div class="flow-header">
+            <div class="flow-badge">SƠ ĐỒ HẠ TẦNG & LUỒNG DỮ LIỆU ĐIỆN TỬ</div>
+            <h3 class="flow-title">Kiến Trúc Triển Khai Không Cần Mở Port (Zero Trust Tunnel)</h3>
+            <p class="flow-desc">
+              Toàn bộ hạ tầng do tôi cấu hình độc lập: từ ứng dụng Python đến Container Docker, máy chủ Ubuntu tại gia và định tuyến an toàn qua Cloudflare Tunnel ra Internet.
+            </p>
+          </div>
+
+          <!-- Flow Diagram Nodes -->
+          <div class="flow-nodes-container">
+            <!-- Node 1: Nhân viên -->
+            <div class="flow-node flow-node-client">
+              <div class="node-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+                <span class="node-type">CLIENT</span>
+              </div>
+              <h4 class="node-title">35 Nhân Viên</h4>
+              <p class="node-text">Truy cập web app từ smartphone/laptop. Gửi dữ liệu toạ độ GPS xác thực vị trí.</p>
+              <div class="node-pill">HTML5 Geolocation API</div>
+            </div>
+
+            <!-- Connector 1 -->
+            <div class="flow-connector">
+              <div class="connector-line">
+                <span class="packet-pulse pulse-1"></span>
+              </div>
+              <span class="connector-label">HTTPS (SSL)</span>
+            </div>
+
+            <!-- Node 2: Cloudflare Tunnel -->
+            <div class="flow-node flow-node-cloud">
+              <div class="node-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+                <span class="node-type">GATEWAY</span>
+              </div>
+              <h4 class="node-title">Cloudflare Tunnel</h4>
+              <p class="node-text">Đưa ứng dụng nội bộ ra Internet an toàn, bảo vệ IP gốc, chống DDoS, không cần NAT/Port-Forwarding.</p>
+              <div class="node-pill text-neon-cyan">Zero Trust Architecture</div>
+            </div>
+
+            <!-- Connector 2 -->
+            <div class="flow-connector">
+              <div class="connector-line">
+                <span class="packet-pulse pulse-2"></span>
+              </div>
+              <span class="connector-label">Encrypted Tunnel</span>
+            </div>
+
+            <!-- Node 3: Docker & Ubuntu Server -->
+            <div class="flow-node flow-node-server">
+              <div class="node-icon-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+                <span class="node-type">ON-PREMISE SERVER</span>
+              </div>
+              <h4 class="node-title">Docker · Python · Ubuntu</h4>
+              <p class="node-text">Máy chủ vật lý chạy tại nhà. Docker quản lý container Python tính toán khoảng cách Geofence và lưu nhật ký công an toàn.</p>
+              <div class="node-pill text-neon-green">Home Lab · 99.9% Uptime</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 BƯỚC THỰC HIỆN DỰ ÁN TỪ A-Z (PROJECT TIMELINE STEPS) -->
+        <div class="project-steps-timeline">
+          <div class="steps-heading">
+            <span class="eyebrow-tech">QUY TRÌNH TRIỂN KHAI</span>
+            <h3 class="steps-title">5 Giai Đoạn Triển Khai Thực Tế Từ A Đến Z Của Một Người Phụ Trách</h3>
+          </div>
+
+          <div class="steps-grid">
+            <!-- Bước 1 -->
+            <div class="step-card">
+              <div class="step-num-badge">01</div>
+              <div class="step-content">
+                <h4 class="step-title">Lên Ý Tưởng & Khảo Sát Nghiệp Vụ</h4>
+                <p class="step-desc">
+                  Phân tích lỗ hổng trong việc chấm công giấy và điểm danh thủ công tại trung tâm. Xác định yêu cầu bài toán: cần hệ thống chấm công điện tử nhanh chóng, không phụ thuộc vào thiết bị đắt đỏ và phải chống gian lận vị trí bằng GPS.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bước 2 -->
+            <div class="step-card">
+              <div class="step-num-badge">02</div>
+              <div class="step-content">
+                <h4 class="step-title">Xây Dựng & Cấu Hình Web Bằng Python</h4>
+                <p class="step-desc">
+                  Viết mã nguồn web application bằng Python: xây dựng giao diện chấm công thân thiện cho nhân viên, trang quản trị theo dõi bảng công theo thời gian thực và thuật toán tính khoảng cách địa lý (Haversine Formula) kiểm tra bán kính Geofence.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bước 3 -->
+            <div class="step-card">
+              <div class="step-num-badge">03</div>
+              <div class="step-content">
+                <h4 class="step-title">Đóng Gói Docker & Triển Khai Cloudflare Tunnel</h4>
+                <p class="step-desc">
+                  Đóng gói toàn bộ ứng dụng và cơ sở dữ liệu vào container Docker. Cài đặt và vận hành trên máy chủ Ubuntu đặt tại nhà. Định tuyến an toàn ra Internet qua Cloudflare Tunnel mà không cần mở port modem, đảm bảo bảo mật và chứng chỉ SSL miễn phí.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bước 4 -->
+            <div class="step-card">
+              <div class="step-num-badge">04</div>
+              <div class="step-content">
+                <h4 class="step-title">Xuất Bản & Hướng Dẫn 35 Nhân Viên</h4>
+                <p class="step-desc">
+                  Tổ chức phổ biến, tạo tài khoản và hướng dẫn 35 nhân sự thao tác chấm công hàng ngày qua trình duyệt di động. Thu thập ý kiến phản hồi để tinh chỉnh giao diện người dùng dễ thao tác nhất.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bước 5 -->
+            <div class="step-card step-highlight">
+              <div class="step-num-badge highlight-badge">05</div>
+              <div class="step-content">
+                <h4 class="step-title">Giám Sát, Vận Hành & Khắc Phục Sự Cố</h4>
+                <p class="step-desc">
+                  Theo dõi trạng thái hệ thống liên tục suốt 3 tháng vận hành. Trong suốt thời gian này, chỉ xảy ra duy nhất 1 sự cố ngắt nguồn điện tại nhà, tôi đã kích hoạt hệ thống điện dự phòng và khôi phục dịch vụ trong vòng ít phút, đảm bảo hệ thống luôn sẵn sàng 24/7.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION HÀNH TRÌNH (JOURNEY / EXPERIENCE) -->
+    <section class="section journey-section" id="hanh-trinh">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-tech">HỌC VẤN & KINH NGHIỆM THỰC TẾ</div>
+          <h2 class="section-title">Hành Trình Rèn Luyện & Phát Triển</h2>
+          <p class="section-subtitle">
+            Sự kết hợp giữa nền tảng học thuật công nghệ thông tin và trải nghiệm 5 năm làm việc kỷ luật ngoài thực tế.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot dot-current">
+              <span class="dot-ping"></span>
+            </div>
+            <div class="timeline-date">
+              <span class="date-badge current-badge">HIỆN TẠI (2026)</span>
+            </div>
+            <div class="timeline-card anti-gravity-card">
+              <div class="timeline-role-row">
+                <h3 class="timeline-role">Sinh Viên Năm Nhất · Công Nghệ Thông Tin</h3>
+                <span class="timeline-tag tag-blue">Đại Học Chính Quy</span>
+              </div>
+              <h4 class="timeline-org">Học viện Công nghệ Bưu chính Viễn thông (PTIT)</h4>
+              <p class="timeline-desc">
+                Chuyên sâu học tập nền tảng khoa học máy tính, lập trình hệ thống, cấu trúc dữ liệu & giải thuật, kiến trúc mạng máy tính và bảo mật thông tin. Ứng dụng tư duy toán học và công nghệ vào các bài toán chuyển đổi số.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              <span class="date-badge">3 NĂM GẮN BÓ</span>
+            </div>
+            <div class="timeline-card anti-gravity-card">
+              <div class="timeline-role-row">
+                <h3 class="timeline-role">Huấn Luyện Viên Dạy Võ Taekwondo & Quản Trị Hệ Thống</h3>
+                <span class="timeline-tag tag-green">Toàn thời gian</span>
+              </div>
+              <h4 class="timeline-org">Trung tâm dạy võ Taekwondo cho học sinh Hàn Quốc</h4>
+              <p class="timeline-desc">
+                - Đào tạo hơn 300 học sinh Hàn Quốc, rèn luyện thể chất và tinh thần thượng võ. 180 em có sự tiến bộ vượt bậc và đạt giải thi đấu (tỷ lệ 60%).<br>
+                - Đồng hành quản trị, tối ưu quy trình giúp trung tâm có lãi liên tiếp 6 tháng.<br>
+                - Tự phát triển và vận hành hệ thống chấm công GPS cho 35 nhân viên ổn định suốt 3 tháng.
+              </p>
+            </div>
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              <span class="date-badge">2 NĂM</span>
+            </div>
+            <div class="timeline-card anti-gravity-card">
+              <div class="timeline-role-row">
+                <h3 class="timeline-role">Làm Các Công Việc Tự Do (Freelance)</h3>
+                <span class="timeline-tag tag-cyan">Đa dạng lĩnh vực</span>
+              </div>
+              <h4 class="timeline-org">Thực hành độc lập</h4>
+              <p class="timeline-desc">
+                Trải nghiệm đa dạng các công việc dự án, rèn luyện kỹ năng giải quyết vấn đề linh hoạt, giao tiếp và đáp ứng đúng nhu cầu khách hàng trong môi trường biến đổi liên tục.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">
+              <span class="date-badge">TRƯỚC ĐÂY</span>
+            </div>
+            <div class="timeline-card anti-gravity-card">
+              <div class="timeline-role-row">
+                <h3 class="timeline-role">Cựu Sinh Viên Năm 3</h3>
+                <span class="timeline-tag tag-gray">Tích lũy nền tảng</span>
+              </div>
+              <h4 class="timeline-org">Trường Đại học Công nghệ Giao thông Vận tải (UTT)</h4>
+              <p class="timeline-desc">
+                Hoàn thành 3 năm đào tạo kỹ thuật, tích lũy tư duy kỹ thuật nền tảng, phương pháp tư duy logic và kỹ năng phân tích trước khi chuyển tiếp sang môi trường đào tạo chuyên sâu về CNTT tại PTIT.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION KỸ NĂNG (SKILLS) -->
+    <section class="section skills-section" id="ky-nang">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-tech">NĂNG LỰC CỐT LÕI</div>
+          <h2 class="section-title">Kỹ Năng Chuyên Môn & Phẩm Chất Con Người</h2>
+          <p class="section-subtitle">
+            Sự cân bằng giữa năng lực kỹ thuật công nghệ thông tin và phẩm chất kỷ luật, trách nhiệm từ võ đạo.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Cột Kỹ năng chuyên môn -->
+          <div class="skill-category-card anti-gravity-card">
+            <div class="category-header">
+              <div class="cat-icon-box bg-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Kỹ Năng Chuyên Môn & CNTT</h3>
+                <span class="cat-sub">Tư duy kỹ thuật và triển khai giải pháp</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Nền tảng CNTT cơ bản & Lập trình (Python, Web)</span>
+                  <span class="skill-level">Cơ bản</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill bg-primary" style="width: 70%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Tư duy giải quyết vấn đề & Đưa ra giải pháp</span>
+                  <span class="skill-level">Tốt</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill bg-neon-cyan" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Phân tích dữ liệu & Đối tượng khách hàng</span>
+                  <span class="skill-level">Tốt</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill bg-neon-green" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Áp dụng AI tối ưu hiệu suất công việc</span>
+                  <span class="skill-level">Tốt</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill bg-neon-cyan" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Giao tiếp cơ bản & Báo cáo kỹ thuật</span>
+                  <span class="skill-level">Hiệu quả</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill bg-neon-green" style="width: 78%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột Phẩm chất & Kỹ năng mềm -->
+          <div class="skill-category-card anti-gravity-card" style="animation-delay: 0.2s;">
+            <div class="category-header">
+              <div class="cat-icon-box bg-neon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Phẩm Chất & Kỹ Năng Mềm</h3>
+                <span class="cat-sub">Tinh thần võ đạo và trách nhiệm công việc</span>
+              </div>
+            </div>
+
+            <div class="soft-skills-grid">
+              <div class="soft-skill-box">
+                <div class="soft-skill-icon text-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                </div>
+                <h4 class="soft-skill-title">Tính Kỷ Luật Cao</h4>
+                <p class="soft-skill-desc">Kỷ luật võ đạo thấm sâu vào phong cách làm việc: luôn chuẩn giờ, bám sát cam kết và hoàn thành chỉn chu nhiệm vụ được giao.</p>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-skill-icon text-neon-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  </svg>
+                </div>
+                <h4 class="soft-skill-title">Làm Việc Nhóm</h4>
+                <p class="soft-skill-desc">Phối hợp nhịp nhàng với ban quản trị, giáo viên Hàn Quốc và phụ huynh để tạo nên môi trường rèn luyện tích cực.</p>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-skill-icon text-neon-cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                </div>
+                <h4 class="soft-skill-title">Đào Tạo Học Sinh & Khách Hàng</h4>
+                <p class="soft-skill-desc">Kỹ năng sư phạm, truyền cảm hứng, kiên nhẫn giảng giải cho học sinh nhỏ tuổi và hướng dẫn người dùng sử dụng phần mềm.</p>
+              </div>
+
+              <div class="soft-skill-box">
+                <div class="soft-skill-icon text-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  </svg>
+                </div>
+                <h4 class="soft-skill-title">Kiên Nhẫn, Chăm Chỉ & Sáng Tạo</h4>
+                <p class="soft-skill-desc">Không ngại khó khi tự mày mò xây dựng hệ thống từ con số 0; luôn tìm tòi cách làm mới tối ưu chi phí cho tập thể.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION HÌNH ẢNH THỰC TẾ (GALLERY & PROOF OF WORK) -->
+    <section class="section gallery-section" id="hinh-anh">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-tech">HÌNH ẢNH THỰC TẾ</div>
+          <h2 class="section-title">Khoảnh Khắc Đời Thường & Đứng Lớp Giảng Dạy</h2>
+          <p class="section-subtitle">
+            Những góc nhìn chân thật về công việc giảng dạy võ thuật cho học sinh quốc tế và phong thái nhiệt huyết của tuổi trẻ.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Ảnh 1: Hero Taekwondo Chân dung -->
+          <div class="gallery-card anti-gravity-card">
+            <div class="gallery-image-box">
+              <img 
+                src="file_000000005274821184aca240a774a90a 1.jpg" 
+                alt="Nguyễn Xuân Diệu trong võ phục Taekwondo đai đen" 
+                class="gallery-img"
+                loading="lazy"
+              >
+              <div class="gallery-overlay">
+                <span class="gallery-tag">BẢN LĨNH & KỶ LUẬT</span>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <h3 class="gallery-title">Chân Dung Võ Phục Taekwondo</h3>
+              <p class="gallery-desc">
+                Đai đen Taekwondo - Biểu tượng của sự bền bỉ rèn luyện, tính kỷ luật cao độ và ý chí không bỏ cuộc trước các thử thách công nghệ.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ảnh 2: Huấn luyện học sinh Hàn Quốc -->
+          <div class="gallery-card anti-gravity-card" style="animation-delay: 0.15s;">
+            <div class="gallery-image-box">
+              <img 
+                src="IMG_1774656363144_1774656428086.jpg" 
+                alt="Huấn luyện viên Nguyễn Xuân Diệu trực tiếp đứng lớp dạy võ Taekwondo cho học sinh Hàn Quốc" 
+                class="gallery-img"
+                loading="lazy"
+              >
+              <div class="gallery-overlay">
+                <span class="gallery-tag">HUẤN LUYỆN VIÊN ĐỨNG LỚP</span>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <h3 class="gallery-title">Đứng Lớp Dạy Võ Cho Học Sinh Hàn Quốc</h3>
+              <p class="gallery-desc">
+                Hình ảnh thực tế trong giờ huấn luyện võ sinh nhí tại võ đường Taekwondo Hàn Quốc: kiên nhẫn uốn nắn từng động tác, truyền dạy lễ nghĩa và tinh thần tự tin.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ảnh 3: Đời thường năng động -->
+          <div class="gallery-card anti-gravity-card" style="animation-delay: 0.3s;">
+            <div class="gallery-image-box">
+              <img 
+                src="IMG_1697975678555_1697975896755.jpg" 
+                alt="Hình ảnh đời thường năng động của Nguyễn Xuân Diệu" 
+                class="gallery-img"
+                loading="lazy"
+              >
+              <div class="gallery-overlay">
+                <span class="gallery-tag">ĐỜI THƯỜNG & KHÁT VỌNG</span>
+              </div>
+            </div>
+            <div class="gallery-caption">
+              <h3 class="gallery-title">Năng Động, Tự Tin & Cầu Tiến</h3>
+              <p class="gallery-desc">
+                Khoảnh khắc đời thường của sinh viên CNTT: chỉn chu, nhiệt huyết, luôn giữ nguồn năng lượng tích cực và sẵn sàng tiếp thu những kiến thức công nghệ mới mỗi ngày.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION LIÊN HỆ (CONTACT WITH COPY BUTTONS) -->
+    <section class="section contact-section" id="lien-he">
+      <div class="container">
+        <div class="contact-card-main anti-gravity-subtle">
+          <div class="contact-header-wrap">
+            <div class="eyebrow-tech">KẾT NỐI VÀ HỢP TÁC</div>
+            <h2 class="contact-heading">Hãy Cùng Nhau Hiện Thực Hóa Ý Tưởng Số!</h2>
+            <p class="contact-lead">
+              Tôi luôn cởi mở đón nhận các cơ hội thực tập, dự án chuyển đổi số quy trình doanh nghiệp hoặc cơ hội pair-programming công nghệ.
+            </p>
+          </div>
+
+          <!-- Contact items with Copy Buttons -->
+          <div class="contact-list-grid">
+            <!-- Email Item -->
+            <div class="contact-method-card">
+              <div class="method-icon-wrap bg-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">ĐỊA CHỈ EMAIL</span>
+                <span class="method-value" id="valEmail">xuandieunguyen70@gmail.com</span>
+              </div>
+              <div class="method-action">
+                <button type="button" class="btn-copy" data-copy-target="valEmail" aria-label="Sao chép Email">
+                  <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Sao chép</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="contact-method-card">
+              <div class="method-icon-wrap bg-neon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">SỐ ĐIỆN THOẠI / ZALO</span>
+                <span class="method-value" id="valPhone">0378567127</span>
+              </div>
+              <div class="method-action">
+                <button type="button" class="btn-copy" data-copy-target="valPhone" aria-label="Sao chép Số điện thoại">
+                  <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Sao chép</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub Item -->
+            <div class="contact-method-card">
+              <div class="method-icon-wrap bg-neon-cyan">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">KHO MÃ NGUỒN GITHUB</span>
+                <a href="https://github.com/NXuandieu0901" target="_blank" rel="noopener noreferrer" class="method-value method-link" id="valGithub">
+                  github.com/NXuandieu0901
+                </a>
+              </div>
+              <div class="method-action">
+                <button type="button" class="btn-copy" data-copy-target="valGithub" aria-label="Sao chép liên kết GitHub">
+                  <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Sao chép</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-brand">Nguyễn Xuân Diệu</span>
+        <span class="footer-desc">Sinh viên CNTT · Học viện Công nghệ Bưu chính Viễn thông (PTIT)</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-badge">Digital Transformation Portfolio 2026</span>
+        <span class="footer-tech">Vanilla HTML · CSS · JS · Anti-Gravity Glow</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div id="toastNotification" class="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <span id="toastMessage" class="toast-message">Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
