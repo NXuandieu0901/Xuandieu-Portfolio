@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "fund": {
+    "name": "Quỹ lớp D26TXCN05-K",
+    "currency": "VND"
+  },
+  "generatedAt": "2026-10-21T18:11:03.872Z",
+  "source": {
+    "type": "google_sheets_initial_import",
+    "snapshotAt": "2026-10-21T18:07:46.223Z",
+    "asOfDate": "2026-10-21",
+    "updateMode": "published_snapshot"
+  },
+  "summary": {
+    "income": 15000000,
+    "grossExpense": 3000000,
+    "refunds": 374645,
+    "netExpense": 2625355,
+    "balance": 12374645,
+    "outstandingAdvances": 0,
+    "totalMembers": 62,
+    "paidMembers": 50,
+    "transactionCount": 52,
+    "periodName": "Đợt thu ban đầu — 10/2026",
+    "periodAmount": 300000
+  },
+  "monthly": [
+    {
+      "month": "2026-10",
+      "income": 15000000,
+      "grossExpense": 3000000,
+      "refunds": 374645,
+      "netExpense": 2625355,
+      "netMovement": 12374645
+    }
+  ],
+  "incomeByDate": [
+    {
+      "date": "2026-10-20",
+      "count": 39,
+      "total": 11700000
+    },
+    {
+      "date": "2026-10-21",
+      "count": 11,
+      "total": 3300000
+    }
+  ],
+  "expenses": [
+    {
+      "id": "GD-0046",
+      "date": "2026-10-21",
+      "kind": "expense",
+      "title": "Mua quà tặng chủ nhiệm lớp 20/10",
+      "category": "Quà tặng/Sự kiện",
+      "amount": 3000000,
+      "cashDelta": -3000000,
+      "status": "Đã ghi sổ"
+    },
+    {
+      "id": "GD-0047",
+      "date": "2026-10-21",
+      "kind": "refund",
+      "title": "Hoàn ứng mua quà chủ nhiệm lớp",
+      "category": "Hoàn quỹ lớp",
+      "amount": 374645,
+      "cashDelta": 374645,
+      "status": "Đã ghi sổ"
+    }
+  ],
+  "rules": [
+    "Chi thực tế = chi phí ghi nhận trừ khoản hoàn/điều chỉnh chi phí.",
+    "Hoàn ứng lịch sử không được cộng vào thu đóng góp.",
+    "Số dư cuối kỳ = số dư đầu kỳ + biến động tiền trong kỳ.",
+    "Đây là bản số liệu tại lần công bố gần nhất, không tự đồng bộ tức thời với Google Sheets."
+  ]
+}
