@@ -1,6 +1,6 @@
 # Kích hoạt quylop.supportnxd.io.vn
 
-Trang công khai đã xuất bản: https://quy-lop-d26txcn05-k.perkylark16.chatgpt.site . Tên miền phụ đã đăng ký nhưng còn chờ xác minh DNS và HTTPS.
+Trang công khai đã xuất bản: https://quy-lop-d26txcn05-k.perkylark16.chatgpt.site . Tên miền https://quylop.supportnxd.io.vn đã hoạt động; xác minh DNS và chứng chỉ HTTPS đều active ngày 22/10/2026.
 
 Trong Cloudflare → DNS của zone supportnxd.io.vn, thêm:
 
@@ -14,4 +14,4 @@ TTL: Auto. Không thay bản ghi của tên miền gốc. Nếu quylop đã có 
 
 Đây là cấu hình cho hosting đã xuất bản qua Sites. Nếu chuyển sang Cloudflare Pages, dùng Custom domain của project Pages và đích .pages.dev thực tế do Cloudflare cấp, không trộn hai bộ cấu hình.
 
-Sau khi lưu DNS, kiểm tra lại trạng thái tên miền và chứng chỉ. Trạng thái pending chưa có nghĩa là tên miền đã hoạt động.
+Các bản ghi trên đã được xác minh. Giữ cấu hình DNS để duy trì tên miền và chứng chỉ.

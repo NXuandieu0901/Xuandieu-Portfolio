@@ -1,12 +1,13 @@
-# Minh bạch Quỹ lớp D26TXCN05-K
+# Dasboard - quản lý thu chi quỹ
 
-## Cấu trúc
+Bản trực tuyến đầy đủ đã triển khai tại https://quylop.supportnxd.io.vn . Đăng nhập quản trị tại https://quylop.supportnxd.io.vn/quan-tri bằng tài khoản ChatGPT sở hữu website. Tài khoản quản trị đã được kiểm tra đăng nhập thực tế.
 
-- `public/`: trang công khai chỉ đọc và report.json đã loại thông tin cá nhân.
-- `backend/`: ứng dụng quản trị Node.js 24/SQLite, có đăng nhập, thu chi, tạm ứng, quyết toán, nhập nguồn và xuất báo cáo công khai.
-- `public-tests/`: kiểm thử giao diện/số liệu công bố.
+- `online/`: bản đang vận hành trên Cloudflare Workers và D1, có đăng nhập, phân quyền và dữ liệu dùng chung; xem online/README.md.
+- `backend/`: bản Node.js/SQLite tham chiếu và công cụ nhập/xuất Google Sheets.
+- `public/`: bản báo cáo snapshot tĩnh trước đây, giữ để tham chiếu; không phải bản quản trị đang chạy.
+- `public-tests/`: kiểm thử báo cáo snapshot cũ.
 
-CNAME và trang portfolio ở gốc repository được giữ nguyên. Nhánh này chưa cấu hình hay thay đổi DNS Cloudflare.
+Tên miền phụ và HTTPS đã xác minh. Giữ nguyên CNAME và website portfolio ở tên miền chính. Cấu hình Cloudflare Pages static bên dưới chỉ dành cho snapshot tĩnh, không dùng để thay backend đang hoạt động.
 
 ## Số liệu ban đầu
 
@@ -55,4 +56,4 @@ npm start
 
 Importer: `node scripts/import-sheet.js /đường/dẫn/snapshot-riêng-tư.json`. Schema snapshot được minh họa bằng dữ liệu giả trong `tests/11-sheet-import.test.js`. Database thật chỉ tồn tại trong môi trường nội bộ, không có trong GitHub.
 
-API `GET /api/public-report` chỉ xuất các trường được phép công khai; mọi API quản trị vẫn yêu cầu xác thực/phân quyền. Backend Node.js/SQLite không thể chạy trên GitHub Pages hoặc Cloudflare Pages static; cần máy chủ Node riêng hoặc chuyển backend sang Workers/D1 nếu muốn vận hành quản trị trực tuyến trên Cloudflare.
+API `GET /api/public-report` chỉ xuất các trường được phép công khai; mọi API quản trị vẫn yêu cầu xác thực/phân quyền. Bản Node.js/SQLite tham chiếu không chạy trên static hosting; bản trực tuyến thực tế đã được chuyển sang Workers/D1 trong online/.

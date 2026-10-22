@@ -1,0 +1,12 @@
+{
+  "name": "quy-lop-transparency",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/*.test.js",
+    "build": "node scripts/build-worker.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}
