@@ -1,0 +1,6 @@
+backend/data/
+backend/imports/private/
+backend/node_modules/
+backend/backups/
+*.sqlite*
+.env

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="vi">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Đồng Quỹ — Quản lý quỹ chung</title
+  ><link rel="stylesheet" href="style.css" />
+  <body class="locked">
+    <aside>
+      <a class="brand" href="#"
+        >◈ <b>đồngquỹ<span> Cùng góp, cùng minh bạch.</span></b></a
+      >
+      <div class="fund">
+        🎓 <strong>Quỹ chung</strong><small>Không gian quản lý quỹ</small>
+      </div>
+      <label class="navlabel">KHÔNG GIAN LÀM VIỆC</label>
+      <nav>
+        <button class="active" data-page="Tổng quan">
+          ▦ <span>Tổng quan</span></button
+        ><button data-page="Khoản thu">↙ <span>Khoản thu</span></button
+        ><button data-page="Khoản chi">↗ <span>Khoản chi</span></button
+        ><button id="members-nav" data-page="Thành viên">
+          ♧ <span>Thành viên</span><i id="member-count">0</i></button
+        ><button data-page="Báo cáo">▤ <span>Báo cáo</span></button
+        ><button data-page="Tạm ứng">⇄ <span>Tạm ứng</span></button
+        ><button id="audit-nav" data-page="Nhật ký">
+          ☷ <span>Nhật ký</span></button
+        ><button id="settings-nav" data-page="Thiết lập">
+          ⚙ <span>Thiết lập</span>
+        </button>
+      </nav>
+      <div class="sidebottom">
+        <div class="tip">
+          ✧<strong>Mỗi khoản góp, một kết nối.</strong>
+          <p>Cùng quản lý quỹ lớp rõ ràng và dễ dàng hơn.</p>
+        </div>
+        <button id="account" class="account">
+          <em>MA</em
+          ><span><b>Minh Anh</b><small>Quản trị viên · Đăng xuất</small></span>
+          ⇄
+        </button>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div>Không gian lớp học <span>/</span> <b id="crumb">Tổng quan</b></div>
+        <div class="header-right">
+          <span class="live">● Quỹ đang hoạt động</span
+          ><button id="bell" aria-label="Thông báo">♧</button><em>MA</em>
+        </div>
+      </header>
+      <section>
+        <div class="heading">
+          <div>
+            <div class="eyebrow">QUẢN LÝ QUỸ CHUNG</div>
+            <h1 id="title">Tổng quan quỹ lớp</h1>
+            <p id="subtitle">Mọi khoản thu chi, rõ ràng trong một góc nhìn.</p>
+          </div>
+          <div class="actions">
+            <button id="export">⇩ Xuất báo cáo</button
+            ><button class="primary" id="add">＋ Tạo giao dịch</button>
+          </div>
+        </div>
+        <div class="context">
+          <span
+            >🎓 <b>Quỹ chung</b>
+            <span class="muted">· 40 thành viên</span></span
+          ><label class="period-label"
+            >Kỳ báo cáo
+            <input id="period" type="month" aria-label="Kỳ thống kê" /><button
+              id="all-periods"
+            >
+              Tất cả
+            </button></label
+          >
+        </div>
+        <article id="student-panel" hidden>
+          <div class="cardhead">
+            <div>
+              <div class="eyebrow">GÓC SINH VIÊN</div>
+              <h3>Khoản đóng góp của bạn</h3>
+              <p>Tra cứu khoản đóng góp theo mã sinh viên của bạn.</p>
+            </div>
+            <span class="status">Quỹ chung</span>
+          </div>
+          <div class="student-grid">
+            <div>
+              <form id="lookup">
+                <label for="student-code">Mã sinh viên</label>
+                <div class="lookup-row">
+                  <input
+                    id="student-code"
+                    placeholder="Mã sinh viên của bạn"
+                    required
+                    maxlength="12"
+                  /><button class="primary">Tra cứu</button>
+                </div>
+              </form>
+              <div id="student-result" aria-live="polite">
+                <p>
+                  Nhập mã sinh viên để xem số tiền đã đóng và lịch sử đóng góp.
+                </p>
+              </div>
+            </div>
+            <div class="qrbox">
+              <h3>Chuyển khoản vào quỹ chung</h3>
+              <img
+                id="fund-qr"
+                hidden
+                alt="Mã QR tài khoản nhận quỹ do quản trị viên cấu hình"
+              />
+              <div id="qr-empty">
+                ▧
+                <p>Chưa cấu hình QR nhận quỹ</p>
+                <small
+                  >Thông tin chuyển khoản sẽ hiển thị sau khi quản trị viên cập
+                  nhật trong Thiết lập.</small
+                >
+              </div>
+              <p id="bank-details">Thông tin tài khoản chưa được cung cấp.</p>
+              <p>
+                Nội dung chuyển khoản:
+                <strong id="transfer-note">Mã sinh viên + mã đợt thu</strong>
+              </p>
+              <small
+                >Chuyển khoản chỉ được tính vào quỹ sau khi quản trị viên đối
+                soát và ghi nhận.</small
+              >
+            </div>
+          </div>
+        </article>
+        <article id="bank-settings" hidden>
+          <div class="cardhead">
+            <div>
+              <h3>Tài khoản ngân hàng và mã QR nhận quỹ</h3>
+              <p>
+                Bạn có thể bỏ qua bước này và bổ sung thông tin bất cứ lúc nào
+                trong Thiết lập.
+              </p>
+            </div>
+            <span id="bank-config-state" class="status">Chưa thiết lập</span>
+          </div>
+          <form id="bank-form">
+            <div class="formgrid">
+              <label
+                >Ngân hàng<input name="bank" required maxlength="80" /></label
+              ><label
+                >Chủ tài khoản<input name="holder" required maxlength="100"
+              /></label>
+            </div>
+            <label
+              >Số tài khoản<input
+                name="number"
+                inputmode="numeric"
+                required
+                pattern="[0-9]{4,30}"
+                maxlength="30" /></label
+            ><label
+              >Ảnh QR do ngân hàng cung cấp<input
+                name="qr"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+            /></label>
+            <p>
+              Ảnh QR phải đúng tài khoản trên. Chấp nhận PNG, JPEG, WebP tối đa
+              1 MB.
+            </p>
+            <button class="primary">Lưu tài khoản nhận quỹ</button>
+            <p id="bank-status" role="status"></p>
+          </form>
+        </article>
+        <article id="period-settings" hidden>
+          <h3>Đợt thu quỹ</h3>
+          <p>
+            Tạo định mức và hạn đóng. Chọn đợt thu khi ghi nhận khoản đóng góp.
+          </p>
+          <form id="period-form">
+            <div class="formgrid">
+              <label
+                >Tên đợt thu<input
+                  name="name"
+                  required
+                  maxlength="100" /></label
+              ><label
+                >Mã đợt thu<input
+                  name="code"
+                  required
+                  pattern="[A-Za-z0-9_-]{2,30}"
+                  placeholder="QUY_T10_2026" /></label
+              ><label
+                >Định mức mỗi sinh viên (VNĐ)<input
+                  name="amount"
+                  type="number"
+                  min="1"
+                  max="1000000000000"
+                  required /></label
+              ><label
+                >Hạn đóng<input name="due_date" type="date" required
+              /></label>
+            </div>
+            <button class="primary">Tạo đợt thu</button>
+          </form>
+          <div id="period-list"></div>
+        </article>
+        <article id="member-tools" hidden>
+          <button id="new-member" class="primary">＋ Thêm sinh viên</button>
+        </article>
+        <div id="dashboard">
+          <div class="stats">
+            <article class="balance">
+              <div>Số dư quỹ hiện tại <span>▣</span></div>
+              <h2 id="balance"></h2>
+              <small id="opening-label">Số dư cuối kỳ theo tiền thực tế</small>
+              <div class="balance-line"></div>
+            </article>
+            <article>
+              <div>Tổng thu <span class="green">↙</span></div>
+              <h2 id="income"></h2>
+              <small
+                ><b class="green">●</b> Đóng góp đã ghi nhận trong kỳ</small
+              >
+            </article>
+            <article>
+              <div>Tổng chi <span class="orange">↗</span></div>
+              <h2 id="expense"></h2>
+              <small
+                ><b class="orange">●</b> Chi phí đã ghi nhận trong kỳ</small
+              >
+            </article>
+            <article>
+              <div>Thành viên đã đóng <span class="purple">♧</span></div>
+              <h2 id="paid"></h2>
+              <small><span id="dues-label">Chưa có đợt thu</span></small>
+            </article>
+          </div>
+          <div class="fund-position">
+            <span>Tạm ứng chưa quyết toán: <b id="outstanding">0 ₫</b></span
+            ><span
+              >Tiền giữ cho khoản đã duyệt hiện tại:
+              <b id="reserved">0 ₫</b></span
+            ><span>Tiền khả dụng hiện tại: <b id="available">0 ₫</b></span>
+          </div>
+          <div class="charts">
+            <article>
+              <div class="cardhead">
+                <div>
+                  <h3>Biến động thu chi</h3>
+                  <p>Thu và chi phí đã ghi nhận theo kỳ</p>
+                </div>
+                <div class="legend"><span>● Thu</span><span>● Chi</span></div>
+              </div>
+              <div class="chart">
+                <div class="yaxis">6 tr<br />4 tr<br />2 tr<br />0</div>
+                <div class="bars" id="bars"></div>
+              </div>
+            </article>
+            <article>
+              <div class="cardhead">
+                <div>
+                  <h3>Phân bổ khoản chi</h3>
+                  <p>Các nhóm chi trước hoàn/điều chỉnh trong kỳ</p>
+                </div>
+                <span>···</span>
+              </div>
+              <div class="donutwrap">
+                <div class="donut">
+                  <div><small>Chi trước hoàn</small><b id="donutTotal"></b></div>
+                </div>
+                <div class="categories" id="categories"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <article id="workflow-panel" hidden>
+          <div class="cardhead">
+            <div>
+              <h3 id="workflow-title"></h3>
+              <p id="workflow-subtitle"></p>
+            </div>
+          </div>
+          <div class="tablewrap">
+            <table>
+              <thead id="workflow-head"></thead>
+              <tbody id="workflow-rows"></tbody>
+            </table>
+          </div>
+        </article>
+        <article class="transactions">
+          <div class="cardhead">
+            <div>
+              <h3 id="tabletitle">Giao dịch gần đây</h3>
+              <p>Cập nhật những khoản đóng góp và chi tiêu của lớp</p>
+            </div>
+            <span class="tiny">DỮ LIỆU QUỸ</span>
+          </div>
+          <div class="filters">
+            <div class="tabs">
+              <button class="selected" data-type="all">Tất cả</button
+              ><button data-type="in">Khoản thu</button
+              ><button data-type="out">Khoản chi</button>
+            </div>
+            <input
+              id="search"
+              placeholder="⌕  Tìm nội dung, người nộp..."
+              aria-label="Tìm giao dịch"
+            />
+          </div>
+          <div class="tablewrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>NỘI DUNG GIAO DỊCH</th>
+                  <th>NGƯỜI NỘP / NHẬN</th>
+                  <th>NGÀY GIAO DỊCH</th>
+                  <th>SỐ TIỀN</th>
+                  <th>TRẠNG THÁI</th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+          <div class="tablefoot">
+            <span id="count"></span><button id="more" hidden>Tải thêm</button
+            ><span>Minh bạch hôm nay, gắn kết ngày mai. ↗</span>
+          </div>
+        </article>
+        <footer>
+          © 2026 Đồng Quỹ <span>Dữ liệu được lưu tại máy chủ</span>
+        </footer>
+      </section>
+    </main>
+    <dialog id="login">
+      <form id="loginForm">
+        <div class="eyebrow">ĐĂNG NHẬP ĐỒNG QUỸ</div>
+        <h2>Cùng nhau giữ quỹ rõ ràng.</h2>
+        <p>Đăng nhập bằng tài khoản được quản trị viên cấp.</p>
+        <label
+          >Email<input
+            id="login-email"
+            type="email"
+            autocomplete="username"
+            required /></label
+        ><label
+          >Mật khẩu<input
+            id="login-password"
+            type="password"
+            autocomplete="current-password"
+            required
+            maxlength="128"
+        /></label>
+        <p id="login-error" role="alert"></p>
+        <button class="primary" type="submit">Đăng nhập →</button>
+      </form>
+    </dialog>
+    <dialog id="editor">
+      <form id="entry">
+        <div class="cardhead">
+          <h2>Tạo giao dịch</h2>
+          <button type="button" id="close">✕</button>
+        </div>
+        <p id="entry-help">Ghi nhận khoản thu đã đối soát.</p>
+        <label
+          >Nội dung<input
+            name="title"
+            required
+            maxlength="120"
+            placeholder="Ví dụ: Đóng quỹ tháng 10" /></label
+        ><label
+          >Người nộp / nhận<select name="member_id" id="people"></select></label
+        ><label
+          >Đợt đóng góp<select name="period_id" id="entry-period">
+            <option value="">Không thuộc đợt thu</option>
+          </select></label
+        >
+        <div class="formgrid">
+          <label
+            >Số tiền (VNĐ)<input
+              name="amount"
+              type="number"
+              min="1"
+              max="1000000000000"
+              step="1"
+              required /></label
+          ><label
+            >Ngày giao dịch<input name="date" type="date" required
+          /></label>
+        </div>
+        <label
+          >Danh mục<select name="category">
+            <option>Quỹ lớp</option>
+            <option>Hoạt động</option>
+            <option>Học tập</option>
+            <option>Khác</option>
+          </select></label
+        ><label
+          >Mã tham chiếu ngân hàng / biên nhận<input
+            name="reference"
+            required
+            maxlength="100" /></label
+        ><label
+          >Chứng từ hoặc giải trình<textarea
+            name="evidence"
+            maxlength="1000"
+          ></textarea></label
+        ><label class="checkbox"
+          ><input type="checkbox" name="confirmed" required /> Tôi đã đối soát
+          và xác nhận quỹ thực nhận tiền.</label
+        ><button class="primary" type="submit">Lưu phiếu thu</button>
+      </form>
+    </dialog>
+    <dialog id="member-editor">
+      <form id="member-form">
+        <div class="cardhead">
+          <h2>Thêm sinh viên</h2>
+          <button type="button" data-close="member-editor">✕</button>
+        </div>
+        <label>Họ tên<input name="name" required maxlength="100" /></label
+        ><label
+          >Mã sinh viên<input
+            name="code"
+            required
+            pattern="[A-Za-z0-9_-]{3,30}" /></label
+        ><label
+          >Email đăng nhập<input name="email" type="email" required /></label
+        ><label
+          >Mật khẩu (khi sửa: để trống nếu giữ nguyên)<input
+            name="password"
+            type="password"
+            minlength="10"
+            maxlength="128"
+            required
+            autocomplete="new-password" /></label
+        ><button class="primary">Tạo tài khoản</button>
+      </form>
+    </dialog>
+    <dialog id="request-editor">
+      <form id="request-form">
+        <div class="cardhead">
+          <h2 id="request-title">Đề nghị chi</h2>
+          <button type="button" data-close="request-editor">✕</button>
+        </div>
+        <label>Mục đích<input name="title" maxlength="160" required /></label
+        ><label
+          >Số tiền (VNĐ)<input
+            name="amount"
+            type="number"
+            min="1"
+            max="1000000000000"
+            required /></label
+        ><label id="request-recipient"
+          >Người nhận<select name="member_id"></select></label
+        ><label id="request-due"
+          >Hạn quyết toán<input name="due_date" type="date" /></label
+        ><label id="request-evidence"
+          >Chứng từ hoặc giải trình<textarea
+            name="evidence"
+            maxlength="1000"
+          ></textarea></label
+        ><label
+          >Danh mục<select name="category">
+            <option>Hoạt động</option>
+            <option>Học tập</option>
+            <option>Khác</option>
+          </select></label
+        ><button class="primary">Gửi đề nghị</button>
+      </form>
+    </dialog>
+    <dialog id="operation-editor">
+      <form id="operation-form">
+        <div class="cardhead">
+          <h2 id="operation-title"></h2>
+          <button type="button" data-close="operation-editor">✕</button>
+        </div>
+        <p id="operation-help"></p>
+        <label id="op-actual"
+          >Chi thực tế (VNĐ)<input
+            name="actual"
+            type="number"
+            min="0"
+            max="1000000000000" /></label
+        ><label id="op-evidence"
+          >Chứng từ hoặc giải trình<textarea
+            name="evidence"
+            maxlength="1000"
+          ></textarea></label
+        ><label id="op-category"
+          >Danh mục<select name="category">
+            <option>Hoạt động</option>
+            <option>Học tập</option>
+            <option>Khác</option>
+          </select></label
+        ><label id="op-reason"
+          >Lý do<textarea name="reason" maxlength="500"></textarea></label
+        ><label id="op-date">Ngày ghi sổ<input name="date" type="date" /></label
+        ><label id="op-reference"
+          >Mã tham chiếu<input name="reference" maxlength="100" /></label
+        ><label id="op-confirm" class="checkbox"
+          ><input name="confirmed" type="checkbox" /> Đã đối soát thanh toán
+          hoặc tiền hoàn thực nhận.</label
+        >
+        <p id="operation-error" role="alert" class="field-error"></p>
+        <button class="primary">Xác nhận</button>
+      </form>
+    </dialog>
+    <dialog id="detail">
+      <div class="cardhead">
+        <h2>Chi tiết giao dịch</h2>
+        <button data-close="detail">✕</button>
+      </div>
+      <div id="detail-content"></div>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
